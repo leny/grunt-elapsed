@@ -59,7 +59,7 @@ module.exports = function(grunt) {
         }
       }
       total /= 1000;
-      minutes = (minutes = Math.floor(total / 60)) > 60 ? (minutes / 60) % 60 : minutes;
+      minutes = (minutes = Math.floor(total / 60)) > 60 ? Math.floor(minutes / 60) % 60 : minutes;
       hours = Math.floor(total / 3600);
       grunt.log.writeln("Time elapsed on project: ±" + (chalk.yellow(hours)) + " hours, " + (chalk.yellow(minutes)) + " minutes.");
       return done();
