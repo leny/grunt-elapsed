@@ -42,7 +42,7 @@ Define task
                         total += difference if prev and prev < current and ( difference = current - prev ) < gap
                         prev = current
                 total /= 1000
-                minutes = if ( minutes = Math.floor( total / 60 ) ) > 60 then ( minutes / 60 ) % 60 else minutes
+                minutes = if ( minutes = Math.floor( total / 60 ) ) > 60 then Math.floor( minutes / 60 ) % 60 else minutes
                 hours = Math.floor total / 3600
                 grunt.log.writeln "Time elapsed on project: ±#{ chalk.yellow( hours ) } hours, #{ chalk.yellow( minutes ) } minutes."
                 done()
