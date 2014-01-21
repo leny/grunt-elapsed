@@ -33,43 +33,26 @@ grunt.loadNpmTasks('grunt-elapsed');
 ## The "elapsed" task
 
 ### Overview
-In your project's Gruntfile, add a section named `elapsed` to the data object passed into `grunt.initConfig()`.
+**grunt-elapsed** is a simple task, called with no configuration or target. You can called it typing `grunt elapsed` in your console.
 
-```js
-grunt.initConfig({
-  elapsed: {
-    options: {
-      // Task-specific options go here.
-    },
-    your_target: {
-      // Target-specific file lists and/or options go here.
-    },
-  },
-});
-```
+The task accepts up to three arguments : 
 
-### Options
+### Arguments
 
-#### options.system
+#### system
 Type: `String`  
 Default value: `'git'`  
 Accepts: Currently, only `git` & `hg` (*mercurial*) are supported.
 
 The version control system used on the project.
 
-#### options.cwd
-Type: `String` (path)  
-Default value: `false` (*current project path*)
-
-The path from where the `log` command for the current version control system is executed.
-
-#### options.gap
+#### gap
 Type: `Number` (minutes)  
 Default value: `120`
 
 Number of minutes above wich the time between two commits is ignored in the total.
 
-#### options.user
+#### user
 Type: `String`  
 Default value: `false`
 
@@ -77,28 +60,16 @@ Use the commit of only one given user.
 
 ### Usage Examples
 
-#### Default Options
+#### Default Arguments
 
-```js
-grunt.initConfig({
-  elapsed: {
-    options: {}
-  }
-});
+```
+grunt elapsed
 ```
 
-#### Custom Options
+#### Custom Arguments
 
-```js
-grunt.initConfig({
-  elapsed: {
-    options: {
-      system: 'hg',
-      gap: 60,
-      user: "leny"
-    }
-  }
-});
+```
+grunt elapsed:hg:60:leny
 ```
 
 ## Contributing
@@ -106,4 +77,9 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 
-**2014/01/21:** project starting
+**2014/01/21:** project starting & v0.1.0
+
+## TODO
+
+* Documenting code
+* Unit tests
