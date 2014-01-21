@@ -4,10 +4,6 @@
 
 * * *
 
-**!!! This plugin is currently in development, and is not yet published on npm !!!**
-
-* * *
-
 ## How it works ?
 
 The plugin, according to his configuration, read the logs of the version control system and computes the difference between each commit timestamp.  
@@ -77,7 +73,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 
-**2014/01/21:** project starting & v0.1.0
+**2014/01/21:** project starting & v0.1.1
 
 ## TODO
 
