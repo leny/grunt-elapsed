@@ -2,7 +2,10 @@
   "name": "grunt-elapsed",
   "description": "Compute approximate development time passed on a project, using logs from version control system.",
   "keywords": [
-    "gruntplugin"
+    "gruntplugin",
+    "time",
+    "elapsed",
+    "tracker"
   ],
   "version": "0.0.1",
   "homepage": "https://github.com/Leny/grunt-elapsed",
