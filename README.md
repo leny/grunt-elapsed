@@ -75,6 +75,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 
+**2014/07/02:** v0.1.4 (increase buffer size)
 **2014/01/21:** project starting & v0.1.1
 
 ## TODO
