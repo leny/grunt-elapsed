@@ -35,8 +35,8 @@
     "test": "grunt test"
   },
   "devDependencies": {
-    "grunt-contrib-coffee": "~0.8",
-    "grunt-contrib-jshint": "~0.6",
+    "grunt-contrib-coffee": "~0.10",
+    "grunt-coffeelint": "~0.0",
     "grunt": "~0.4"
   },
   "peerDependencies": {

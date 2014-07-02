@@ -10,24 +10,49 @@
 
 module.exports = ( grunt ) ->
 
+  grunt.loadNpmTasks "grunt-coffeelint"
+  grunt.loadNpmTasks "grunt-contrib-coffee"
+
   grunt.initConfig
+    coffeelint:
+      options:
+        arrow_spacing:
+          level: "error"
+        camel_case_classes:
+          level: "error"
+        duplicate_key:
+          level: "error"
+        indentation:
+          level: "ignore"
+        max_line_length:
+          level: "ignore"
+        no_backticks:
+          level: "error"
+        no_empty_param_list:
+          level: "error"
+        no_stand_alone_at:
+          level: "error"
+        no_tabs:
+          level: "error"
+        no_throwing_strings:
+          level: "error"
+        no_trailing_semicolons:
+          level: "error"
+        no_unnecessary_fat_arrows:
+          level: "error"
+        space_operators:
+          level: "error"
+      task:
+        files:
+          src: [ "src/*.coffee" ]
     coffee:
       compile:
         options:
           bare: yes
         files:
           "tasks/elapsed.js": "src/elapsed.coffee.md"
-    jshint:
-      task: [
-        "tasks/elapsed.js"
-      ]
-      options:
-        jshintrc: ".jshintrc"
-
-  grunt.loadNpmTasks "grunt-contrib-jshint"
-  grunt.loadNpmTasks "grunt-contrib-coffee"
 
   grunt.registerTask "default", [
+    "coffeelint"
     "coffee"
-    "jshint"
   ]
