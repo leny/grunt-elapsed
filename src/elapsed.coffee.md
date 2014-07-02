@@ -31,7 +31,7 @@ Define task
             return grunt.log.error "Unknown version control system '#{ system }' !" unless commands[ system ]
             command = commands[ system ].logs
             command += commands[ system ].filter.replace "%s", user if user
-            exec command, ( error, stdOut, stdErr ) ->
+            exec command, { maxBuffer: 1024 * 1024 }, ( error, stdOut, stdErr ) ->
                 return grunt.log.error error if error
                 total = 0
                 prev = no

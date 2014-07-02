@@ -39,7 +39,9 @@ module.exports = function(grunt) {
     if (user) {
       command += commands[system].filter.replace("%s", user);
     }
-    return exec(command, function(error, stdOut, stdErr) {
+    return exec(command, {
+      maxBuffer: 1024 * 1024
+    }, function(error, stdOut, stdErr) {
       var current, difference, hours, minutes, prev, sLine, total, _i, _len, _ref;
       if (error) {
         return grunt.log.error(error);
