@@ -1,6 +1,6 @@
 # grunt-elapsed
 
-![NPM version](http://img.shields.io/npm/v/grunt-elapsed.svg) ![Dependency Status](https://david-dm.org/leny/grunt-elapsed.svg) ![Downloads counter](http://img.shields.io/npm/dm/grunt-elapsed.svg)
+![NPM version](http://img.shields.io/npm/v/grunt-elapsed.svg) ![Dependency Status](https://david-dm.org/leny/grunt-elapsed.svg) ![Downloads counter](http://img.shields.io/npm/dm/grunt-elapsed.svg) [![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
 
 > Compute approximate development time passed on a project, using logs from version control system.
 
